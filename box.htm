@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Box</title>
+	
+	<style>
+		#box {
+			background-color: green;
+			width: 5px;
+			height: 5px;
+		}
+	</style>
+</head>
+<body>
+	<input type="text" id="width" />
+	<input type="text" id="height" />
+	<button id="btn">Ok</button>
+	<div id="box"></div>
+	
+	<script>
+		
+		id("btn").onclick = function() {
+			var width = parseInt(id("width").value);
+			var height = parseInt(id("height").value);
+			id("box").style.width = width + "px";
+			id("box").style.height = height + "px";
+		}
+		
+		function id(e) { return document.getElementById(e); }
+	</script>
+</body>
+</html>
