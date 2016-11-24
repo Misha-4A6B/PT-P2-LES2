@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Berekenen</title>
+</head>
+<body>
+	<label for="price">Prijs per stuk: </label>
+	<input type="text" id="price" />
+	<br />
+	<label for="total">Aantal: </label>
+	<input type="text" id="total" />
+	<p id="sum">Totaal prijs: </p>
+	<button id="calculate">Berekenen</button>
+	
+	<script>
+		function id(e) {
+			return document.getElementById(e);
+		}
+		
+		id("calculate").onclick = function() {
+			var price = parseFloat(id("price").value);
+			var total = parseFloat(id("total").value);
+			var sum = price * total;
+			id("sum").innerHTML = "Totaal prijs: &euro; " + sum.toFixed(2);
+		}
+	</script>
+</body>
+</html>
