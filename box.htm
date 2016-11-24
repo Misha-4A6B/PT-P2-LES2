@@ -27,6 +27,16 @@
 			id("box").style.height = height + "px";
 		}
 		
+		id("width").onkeyup = function() {
+			var width = parseInt(id("width").value);
+			id("box").style.width = width + "px";
+		}
+		
+		id("height").onkeyup = function() {
+			var height = parseInt(id("height").value);
+			id("box").style.height = height + "px";
+		}
+		
 		function id(e) { return document.getElementById(e); }
 	</script>
 </body>
