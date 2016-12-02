@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Box</title>
+	
+	<style>
+		#box {
+			background-color: green;
+			width: 100px;
+			height: 100px;
+		}
+	</style>
+</head>
+<body>
+	W: <input type="text" id="width" value="100" />
+	H: <input type="text" id="height" value="100" />
+	C:
+	<select id="colors">
+		<option value="red">Red</option>
+		<option value="yellow">Yellow</option>
+		<option value="green">Green</option>
+		<option value="blue">Blue</option>
+		<option value="Grey">Grey</option>
+		<option value="black">Black</option>
+	</select>
+	<div id="box"></div>
+	
+	<script>
+		
+		id("colors").onchange = function() {
+			id("box").style.backgroundColor = id("colors").value;
+		}
+		
+		id("width").onkeyup = function() {
+			var width = id("width").value;
+			id("box").style.width = width + "px";
+		}
+		
+		id("height").onkeyup = function() {
+			var height = id("height").value;
+			id("box").style.height = height + "px";
+		}
+		
+		function id(e) { return document.getElementById(e); }
+	</script>
+</body>
+</html>
