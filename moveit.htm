@@ -9,7 +9,7 @@
 		.box {
 			width: 100px;
 			height: 100px;
-			background: #777;
+			background: #888;
 		}
 	</style>
 </head>
@@ -19,6 +19,9 @@
 	
 	<button id="omhoog" disabled>Omhoog</button>
 	<button id="omlaag">Omlaag</button>
+	
+	<button id="draaiLinks" disabled>Draai links</button>
+	<button id="draaiRechts">Draai rechts</button>
 	
 	<div class="box" id="box"></div>
 	
@@ -49,6 +52,19 @@
 			box.style.marginTop = "100px"
 			id("omhoog").disabled = false;
 			id("omlaag").disabled = true;
+		}
+		
+		// maar dat zie je toch niet? hij komt terug op waar die was
+		id("draaiLinks").onclick = function() {
+			box.style.transform = "rotate(-360deg)";
+			id("draaiLinks").disabled = true;
+			id("draaiRechts").disabled = false;
+		}
+		
+		id("draaiRechts").onclick = function() {
+			box.style.transform = "rotate(360deg)";
+			id("draaiLinks").disabled = false;
+			id("draaiRechts").disabled = true;
 		}
 	</script>
 </body>
