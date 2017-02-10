@@ -17,6 +17,9 @@
 	<button id="links" disabled>Links</button>
 	<button id="rechts">Rechts</button>
 	
+	<button id="omhoog" disabled>Omhoog</button>
+	<button id="omlaag">Omlaag</button>
+	
 	<div class="box" id="box"></div>
 	
 	<script>
@@ -34,6 +37,18 @@
 			box.style.marginLeft = "100px"
 			id("links").disabled = false;
 			id("rechts").disabled = true;
+		}
+		
+		id("omhoog").onclick = function() {
+			box.style.marginTop = "0px"
+			id("omhoog").disabled = true;
+			id("omlaag").disabled = false;
+		}
+		
+		id("omlaag").onclick = function() {
+			box.style.marginTop = "100px"
+			id("omhoog").disabled = false;
+			id("omlaag").disabled = true;
 		}
 	</script>
 </body>
