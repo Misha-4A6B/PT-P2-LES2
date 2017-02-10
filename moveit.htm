@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<style>
+		body {
+			background: #eee;
+		}
+		
+		.box {
+			width: 100px;
+			height: 100px;
+			background: #777;
+		}
+	</style>
+</head>
+<body>
+	<button id="links" disabled>Links</button>
+	<button id="rechts">Rechts</button>
+	
+	<div class="box" id="box"></div>
+	
+	<script>
+		function id(e) { return document.getElementById(e); }
+		
+		var box = id("box");
+		
+		id("links").onclick = function() {
+			box.style.marginLeft = "0px"
+			id("links").disabled = true;
+			id("rechts").disabled = false;
+		}
+		
+		id("rechts").onclick = function() {
+			box.style.marginLeft = "100px"
+			id("links").disabled = false;
+			id("rechts").disabled = true;
+		}
+	</script>
+</body>
+</html>
